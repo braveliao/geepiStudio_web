@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geepi.studio.mapper.ShopDetailDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.geepi.studio.entity.ShopDetail">
+        <result column="id" property="id" />
+        <result column="category_id" property="categoryId" />
+        <result column="is_on_sale" property="isOnSale" />
+        <result column="name" property="name" />
+        <result column="goods_number" property="goodsNumber" />
+        <result column="sell_volume" property="sellVolume" />
+        <result column="keywords" property="keywords" />
+        <result column="retail_price" property="retailPrice" />
+        <result column="min_retail_price" property="minRetailPrice" />
+        <result column="cost_price" property="costPrice" />
+        <result column="min_cost_price" property="minCostPrice" />
+        <result column="goods_brief" property="goodsBrief" />
+        <result column="goods_desc" property="goodsDesc" />
+        <result column="sort_order" property="sortOrder" />
+        <result column="is_index" property="isIndex" />
+        <result column="is_new" property="isNew" />
+        <result column="goods_unit" property="goodsUnit" />
+        <result column="https_pic_url" property="httpsPicUrl" />
+        <result column="list_pic_url" property="listPicUrl" />
+        <result column="freight_template_id" property="freightTemplateId" />
+        <result column="freight_type" property="freightType" />
+        <result column="is_delete" property="isDelete" />
+        <result column="has_gallery" property="hasGallery" />
+        <result column="has_done" property="hasDone" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, category_id, is_on_sale, name, goods_number, sell_volume, keywords, retail_price, min_retail_price, cost_price, min_cost_price, goods_brief, goods_desc, sort_order, is_index, is_new, goods_unit, https_pic_url, list_pic_url, freight_template_id, freight_type, is_delete, has_gallery, has_done, create_time, update_time
+    </sql>
+
+</mapper>

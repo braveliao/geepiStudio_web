@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geepi.studio.mapper.DataProductRecordDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.geepi.studio.entity.DataProductRecord">
+        <id column="id" property="id" />
+        <result column="serial_no" property="serialNo" />
+        <result column="user_id" property="userId" />
+        <result column="status" property="status" />
+        <result column="biz_type" property="bizType" />
+        <result column="order_id" property="orderId" />
+        <result column="cycle" property="cycle" />
+        <result column="remark" property="remark" />
+        <result column="gift_time" property="giftTime" />
+        <result column="receive_time" property="receiveTime" />
+        <result column="expire_time" property="expireTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, serial_no, user_id, status, biz_type, order_id, cycle, remark, gift_time, receive_time, expire_time, create_time, update_time
+    </sql>
+
+</mapper>
