@@ -31,6 +31,7 @@ public class IndexService {
     private ShopDetailService shopDetailService;
 
     public List<CategoryVo> queryCategoryList() {
+        //ddddd
         QueryWrapper<Category> queryMapper = new QueryWrapper<>();
         List<Category> categoryList = categoryService.list(queryMapper);
         return categoryList.stream().map(element -> {
