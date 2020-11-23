@@ -1,9 +1,9 @@
 package com.geepi.studio.service.impl;
 
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.geepi.studio.entity.HkTradeRecord;
 import com.geepi.studio.mapper.HkTradeRecordDao;
 import com.geepi.studio.service.HkTradeRecordService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

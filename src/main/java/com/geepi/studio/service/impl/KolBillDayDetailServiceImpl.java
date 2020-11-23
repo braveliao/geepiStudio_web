@@ -1,9 +1,9 @@
 package com.geepi.studio.service.impl;
 
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.geepi.studio.entity.KolBillDayDetail;
 import com.geepi.studio.mapper.KolBillDayDetailDao;
 import com.geepi.studio.service.KolBillDayDetailService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

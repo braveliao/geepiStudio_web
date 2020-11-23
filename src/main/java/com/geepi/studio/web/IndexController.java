@@ -1,7 +1,6 @@
 package com.geepi.studio.web;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+
 import com.geepi.studio.entity.Category;
 import com.geepi.studio.entity.ShopDetail;
 import com.geepi.studio.service.CategoryService;
@@ -44,7 +43,7 @@ public class IndexController {
         ResultDto resultDto = new ResultDto();
 
         IndexVo indexVo = new IndexVo();
-        indexVo.setCategoryList(indexService.queryCategoryList());
+//        indexVo.setCategoryList(indexService.queryCategoryList());
         indexVo.setChannel(new ArrayList<>());
         indexVo.setBanner(new ArrayList<>());
         indexVo.setNotice(new ArrayList<>());
@@ -59,7 +58,7 @@ public class IndexController {
 
     @RequestMapping("/goods/detail")
     public ResultDto goodsDetail(@RequestParam("id") Integer id) {
-        ShopDetail shopDetail = shopDetailService.getById(id);
+        ShopDetail shopDetail = shopDetailService.selectById(id);
         ResultDto resultDto = new ResultDto();
         ShopDetailVo shopDetailVo = new ShopDetailVo();
         shopDetailVo.setInfo(shopDetail);

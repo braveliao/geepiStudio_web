@@ -1,6 +1,5 @@
 package com.geepi.studio.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.geepi.studio.entity.Category;
 import com.geepi.studio.entity.ShopDetail;
 import com.geepi.studio.vo.CategoryVo;
@@ -30,20 +29,20 @@ public class IndexService {
     @Autowired
     private ShopDetailService shopDetailService;
 
-    public List<CategoryVo> queryCategoryList() {
-        //ddddd
-        QueryWrapper<Category> queryMapper = new QueryWrapper<>();
-        List<Category> categoryList = categoryService.list(queryMapper);
-        return categoryList.stream().map(element -> {
-            CategoryVo categoryVo = new CategoryVo();
-            BeanUtils.copyProperties(element, categoryVo);
-
-            QueryWrapper<ShopDetail> shopQuery = new QueryWrapper<>();
-            shopQuery.eq("category_id", element.getId());
-            categoryVo.setGoodsList(shopDetailService.list(shopQuery));
-            return categoryVo;
-        }).collect(Collectors.toList());
-    }
+//    public List<CategoryVo> queryCategoryList() {
+//        //ddddd
+//        QueryWrapper<Category> queryMapper = new QueryWrapper<>();
+//        List<Category> categoryList = categoryService.list(queryMapper);
+//        return categoryList.stream().map(element -> {
+//            CategoryVo categoryVo = new CategoryVo();
+//            BeanUtils.copyProperties(element, categoryVo);
+//
+//            QueryWrapper<ShopDetail> shopQuery = new QueryWrapper<>();
+//            shopQuery.eq("category_id", element.getId());
+//            categoryVo.setGoodsList(shopDetailService.list(shopQuery));
+//            return categoryVo;
+//        }).collect(Collectors.toList());
+//    }
 
     public List<GalleryVo> queryGalleryList(ShopDetail shopDetail) {
         GalleryVo galleryVo = new GalleryVo();

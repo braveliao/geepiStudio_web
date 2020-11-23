@@ -1,7 +1,7 @@
 package com.geepi.studio.service;
 
+import com.baomidou.mybatisplus.service.IService;
 import com.geepi.studio.entity.HkTradeRecord;
-import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>

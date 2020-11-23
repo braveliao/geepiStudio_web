@@ -1,6 +1,6 @@
 package com.geepi.studio.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.geepi.studio.entity.Category;
 import org.springframework.stereotype.Repository;
 
