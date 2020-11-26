@@ -1,8 +1,8 @@
 package com.geepi.studio.service.impl;
 
 import com.geepi.studio.entity.CcCard;
-import com.geepi.studio.dao.CcCardMapper;
-import com.geepi.studio.service.ICcCardService;
+import com.geepi.studio.dao.CcCardDao;
+import com.geepi.studio.service.CcCardService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
  * 卡表 服务实现类
  * </p>
  *
- * @author astupidcoder
- * @since 2020-11-25
+ * @author geepi
+ * @since 2020-11-26
  */
 @Service
-public class CcCardServiceImpl extends ServiceImpl<CcCardMapper, CcCard> implements ICcCardService {
+public class CcCardServiceImpl extends ServiceImpl<CcCardDao, CcCard> implements CcCardService {
 
 }

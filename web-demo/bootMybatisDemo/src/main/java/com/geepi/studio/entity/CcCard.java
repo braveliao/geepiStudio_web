@@ -1,32 +1,26 @@
 package com.geepi.studio.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.time.LocalDateTime;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.experimental.Accessors;
+import java.io.Serializable;
 
 /**
  * <p>
  * 卡表
  * </p>
  *
- * @author astupidcoder
- * @since 2020-11-25
+ * @author geepi
+ * @since 2020-11-26
  */
-@Data
-@TableName(value = "wl_oas.cc_card")
-public class CcCard extends Model {
+@TableName("cc_card")
+public class CcCard extends Model<CcCard> {
 
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID=1L;
 
     /**
      * ID
      */
-    @TableId(type = IdType.AUTO)
     private String id;
 
     /**
@@ -57,4 +51,77 @@ public class CcCard extends Model {
     private Integer del;
 
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getStatus() {
+        return status;
+    }
+
+    public void setStatus(Long status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public Integer getDel() {
+        return del;
+    }
+
+    public void setDel(Integer del) {
+        this.del = del;
+    }
+
+    @Override
+    protected Serializable pkVal() {
+        return this.id;
+    }
+
+    @Override
+    public String toString() {
+        return "CcCard{" +
+        "id=" + id +
+        ", type=" + type +
+        ", name=" + name +
+        ", status=" + status +
+        ", createTime=" + createTime +
+        ", updateTime=" + updateTime +
+        ", del=" + del +
+        "}";
+    }
 }

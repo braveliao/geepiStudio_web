@@ -8,9 +8,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * 卡表 服务类
  * </p>
  *
- * @author astupidcoder
- * @since 2020-11-25
+ * @author geepi
+ * @since 2020-11-26
  */
-public interface ICcCardService extends IService<CcCard> {
+public interface CcCardService extends IService<CcCard> {
 
 }

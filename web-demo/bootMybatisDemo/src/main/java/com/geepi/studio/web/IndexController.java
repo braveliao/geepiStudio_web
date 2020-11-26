@@ -1,8 +1,7 @@
 package com.geepi.studio.web;
 
 import com.geepi.studio.entity.CcCard;
-import com.geepi.studio.entity.User;
-import com.geepi.studio.service.ICcCardService;
+import com.geepi.studio.service.CcCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,7 +20,7 @@ import java.util.List;
 @RequestMapping("/api/")
 public class IndexController {
     @Autowired
-    private ICcCardService ccCardService;
+    private CcCardService ccCardService;
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public List<CcCard> hello() {
