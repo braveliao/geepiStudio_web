@@ -45,10 +45,6 @@ public class CcCard extends Model<CcCard> {
      */
     private LocalDateTime updateTime;
 
-    /**
-     * 删除 (0保留、1删除)
-     */
-    private Integer del;
 
 
     public String getId() {
@@ -99,13 +95,6 @@ public class CcCard extends Model<CcCard> {
         this.updateTime = updateTime;
     }
 
-    public Integer getDel() {
-        return del;
-    }
-
-    public void setDel(Integer del) {
-        this.del = del;
-    }
 
     @Override
     protected Serializable pkVal() {
@@ -121,7 +110,6 @@ public class CcCard extends Model<CcCard> {
         ", status=" + status +
         ", createTime=" + createTime +
         ", updateTime=" + updateTime +
-        ", del=" + del +
         "}";
     }
 }
